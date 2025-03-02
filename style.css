@@ -122,4 +122,51 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
 
