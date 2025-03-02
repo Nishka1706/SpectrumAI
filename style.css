@@ -189,7 +189,7 @@ nav ul {
 /* Mobile view: hide menu until clicked */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide menu on small screens */
+        display: flex; /* Hide menu on small screens */
         flex-direction: column;
         background: rgba(0, 0, 0, 0.8);
         position: absolute;
