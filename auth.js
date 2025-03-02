@@ -36,3 +36,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const signupForm = document.getElementById("signup-form");
+
+    if (signupForm) {
+        signupForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Save user data in session storage (temporary for now)
+            const user = { name, email, password };
+            sessionStorage.setItem("user", JSON.stringify(user));
+
+            alert("Account created successfully! You can now log in.");
+            window.location.href = "login.html"; // Redirect to login page
+        });
+    }
+});
+
