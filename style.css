@@ -179,10 +179,17 @@ footer {
     right: 20px;
 }
 
-/* Show menu in mobile view */
+/* Ensure the menu is always visible on large screens */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Mobile view: hide menu until clicked */
 @media (max-width: 768px) {
     nav ul {
-        display: none;
+        display: none; /* Hide menu on small screens */
         flex-direction: column;
         background: rgba(0, 0, 0, 0.8);
         position: absolute;
@@ -200,5 +207,3 @@ footer {
         display: block;
     }
 }
-
-
